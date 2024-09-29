@@ -1,2 +1,2 @@
-# Login_Page
-## A basic login page for a user to sign in.
+# Library System
+## A basic library system for schools and colleges.
