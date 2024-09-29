@@ -61,7 +61,7 @@ h1, h2 {
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    gap: 20px;
+    gap: 20px; /* Adds space between buttons */
 }
 
 .user-btn {
@@ -75,24 +75,6 @@ h1, h2 {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.user-btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-/* User Sections (Student, Teacher, Admin) */
-.user-section {
-    display: none;
-    text-align: center;
-    padding: 30px 20px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 30px auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    animation: fadeIn 0.5s ease-in-out;
 }
 
 .user-btn.teacher {
@@ -113,28 +95,70 @@ h1, h2 {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* User Sections (Student, Teacher, Admin) */
+.user-section {
+    display: none;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 30px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    transition: all 0.3s ease;
+}
+
+/* Section Headings */
+.user-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* List Styles */
 .user-section ul {
     list-style-type: none;
-    margin-top: 20px;
+    padding: 0;
 }
 
 .user-section ul li {
-    margin: 10px 0;
+    margin: 15px 0;
     padding: 15px;
-    background-color: #f9f9f9;
-    border: 2px solid #007bff;
-    color: #007bff;
-    width: 200px;
+    background-color: #f9f9f9; /* Light background for items */
+    border: 2px solid #007bff; /* Border color */
+    color: #333;
+    width: 80%; /* Slightly smaller width */
     margin-left: auto;
     margin-right: auto;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative; /* For positioning effects */
 }
 
+/* Hover Effects for List Items */
 .user-section ul li:hover {
-    background-color: #007bff;
-    color: white;
-    transform: translateY(-5px);
+    background-color: #007bff; /* Change background on hover */
+    color: white; /* Change text color on hover */
+    transform: translateY(-5px); /* Slight elevation effect */
+}
+
+/* Icons for List Items */
+.user-section ul li:before {
+    content: "✓"; /* Add checkmark icon */
+    color: #007bff; /* Icon color */
+    position: absolute; /* Positioning */
+    left: 10px; /* Space from the left */
+    font-weight: bold; /* Make icon bold */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-section {
+        width: 90%; /* Make section wider on smaller screens */
+    }
+
+    .user-section ul li {
+        width: 100%; /* Full width for items on small screens */
+    }
 }
 
 /* Show the first section (Student) by default */
@@ -153,3 +177,4 @@ h1, h2 {
         transform: translateY(0);
     }
 }
+
