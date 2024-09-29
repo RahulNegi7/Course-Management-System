@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Dashboard</title>
+    <link rel="stylesheet" href="style_2.css">
+</head>
+<body>
+    <!-- Common Navigation -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#profile">Profile</a>
+        <a href="#logout">Logout</a>
+    </div>
+
+    <!-- Login Screen -->
+    <section class="login-screen">
+        <h1>Login Screen</h1>
+        <div class="user-options">
+            <button onclick="showSection('student-section')">Student</button>
+            <button onclick="showSection('teacher-section')">Teacher</button>
+            <button onclick="showSection('admin-section')">Admin</button>
+        </div>
+    </section>
+
+    <!-- Student Section -->
+    <section id="student-section" class="user-section">
+        <h2>Student Dashboard</h2>
+        <ul>
+            <li>Courses Select</li>
+            <li>Submissions</li>
+            <li>Reference Material</li>
+            <li>Grade Book</li>
+            <li>Grade Calculation</li>
+            <li>Attendance</li>
+        </ul>
+    </section>
+
+    <!-- Teacher Section -->
+    <section id="teacher-section" class="user-section">
+        <h2>Teacher Dashboard</h2>
+        <ul>
+            <li>Add Course</li>
+            <li>Check Students</li>
+            <li>Add Assignments</li>
+            <li>Add Material</li>
+            <li>Upload Attendance</li>
+        </ul>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin-section" class="user-section">
+        <h2>Admin Dashboard</h2>
+        <ul>
+            <li>Remove</li>
+            <li>Teacher and their Courses</li>
+            <li>Student List with their Courses</li>
+        </ul>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.user-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
