@@ -89,7 +89,7 @@ body{
 }
 
 
-#Submit-btn > a{
+#Submit-btn{
     display: flex;
     color: white;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
